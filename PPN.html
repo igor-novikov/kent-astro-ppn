@@ -1,0 +1,196 @@
+<!DOCTYPE HTML>
+<html>
+<head><title>Interaction of Jets and Winds with molecular environment</title>
+
+
+<style type="text/css">
+body {background-color:#eeeeee, }
+p,li {
+	font-family: Arial, Helvetica, sans-serif;
+}
+h3 {
+font-size: 16, bold;
+color:#666666;
+}
+div.contents
+{
+width:800px;
+ margin-right: auto ;
+ margin-left: auto ;
+}
+p.header {font-family:monospace,Helvetica,sans-serif;
+	text-align: center;
+	color: #666666;
+}
+table {
+	border-collapse:separate;
+	border-spacing:55px 7px;
+}
+table.five {
+	border-collapse:separate;
+	border-spacing:30px 7px;
+}
+
+</style>
+
+</head>
+
+<body>
+<h2><center>
+Protoplanetary nebula </br>
+Interaction of Jets and Winds with molecular environment</h2></center>
+<p class="header">MSc Astrophysics Project | Igor Novikov | University of Kent | Supervisor: Professor Michael D. Smith</p>
+<div class="contents">
+<img src="bar.gif">
+<h2><center><font color="red">Abstract</font></center></h2>
+<p><i>Protoplanetary nebula (PPN) have not been simulated with a molecular code. Numerical simulations with (dzeus v3.5) are carried out to highlight the interaction of protostellar winds with the central star (CS). High-resolution observations made by ALMA of molecular lines from PPN is used as source material for comparison between theory and observations.</i></p>
+
+<h3>1 Observations</h3>
+<p>The launching of high-velocity jets are among the most exiting, short-lived events in a life of a star in a transitional period from the asymptotic giant branch (AGB) to the PN phase. Imaging and spectroscopy of emission of molecular lines is used to determine kinematic ages of jets. As a result, the observations are made with millimeter CO tracer lines. Information about the tilt of the system is required because only projected quantities are measured.<p>
+
+<b>1.1 Time Evolution MS-AGB-PPN-PN of intermediate-mass stars<br /></b>
+<ul>
+<li>The Star starts it's evolutionary track by moving up and leftwards in the HR diagram, it swells up to giant proportions and cools down becoming a red giant</li>
+<img src="AGB.png">
+<center><i>Figure 1: Evolution of stars of different masses are represented in the Hertzsprung–Russell diagram. The asymptotic giant branch is marked AGB in the case of a star of 2 solar masses.</i></center></p>
+
+<li>Next the outer layers are ejected out forming a dense cloud of gas and dust that obsqures the visible light from the star. This stage called pre-planetary or proto-planetary nebula PPN is hard to observe as it is so faint, only IR emissions from the dust cloud and reflected star light are observed.</li>
+<li>It is also a very short period in stellar evolution &#126;  10&#179; years making these objects scarse.</li>
+<li>Images of PPN made by Hubble show a wide variety of shapes hinting at complex dynamics</li>
+<li>Further on as the satr ejects its outer layers to form the cold PPN nebula, the core of the star is left behind</li>
+<li>Throughout the time period of PPN, the gas in the PPN is exited by the radiation from the core.</li>
+<li>At the end of that period the faint PPN nebula becomes a bright planetary nebula PN.</li>
+<li>Eventually the gas in PN is diffused into space leaving behind a dense, dim white dwarf and the matter ejected by PN forms new building blocks for next generation of stars.</li>
+
+
+</p>
+<img src="propeller.png">
+
+<h3>2 Parameters</h3>
+<b>2.1 PPN parameters<br /></b>
+<ul>
+<li>Evolution phase in the life cycle of intermediate-mass stars (0.8-8 Mass of the Sun)</li>
+<li>Intermidiate stage between the late asymtotic branch (LAGB) and planetary nebula (PN)</li>
+<li>Emit strong infrared radiation.</li>
+</ul>
+
+
+<b>2.2 Jet parameters<br /></b>
+<p>The parameters below are listed from 'Astrophysical Jets and Beams' by Michael D. Smith.<br />
+
+<ul>
+<li>The origin. The supplier of the jet flow and the location of the launcher.</li>
+<table>
+	<tr><td>Jet Type</td><td>Length</td><td>Speed</td><td>Time scale</td></tr>
+	<tr><td>Protostellar</td><td>Protostar</td><td>Molecular Core</td><td>Molecular Clump</td></tr>
+</table>
+
+
+
+<br />
+<li>The scales. Typical sizes, speeds and dynamical timescales</li>
+<table>
+	<tr><td>Jet Type</td><td>Length</td><td>Speed</td><td>Time scale</td></tr>
+	<tr><td>Protostellar</td><td>&#126; 1 <i>pc</i></td><td>&#126; 100 <i>km/s</i></td><td>&#126; 3000 years</td></tr>
+</table>
+
+
+<br />
+<li>The jet launch. Properties of the driving sources.</li>
+<table>
+	<tr><td>Jet Type</td><td>Source size</td><td>Detected Disk</td><td>Detected Jets</td></tr>
+	<tr><td>Protostellar</td><td>&#126; 5R&#9737;</td><td>Yes</td><td>Yes 'HH211'</td></tr>
+</table>
+<br />
+
+
+
+<li>The jet emission. Spectral range and radiation process.</li>
+<table clas="five">
+	<tr><td>Jet Type</td><td>Waveband</td><td>Type</td><td>Material</td><td>Process</td>
+	</tr>
+	<tr><td>Protostellar</td><td>Infrared</td><td>Line</td><td>H2</td><td>Rotation/Vibration</td></tr>
+</table>
+</ul> 
+</p>
+
+<b>2.3 Nature of Jets<br /></b>
+<p>Velocity, mass and energy distribution of Jets is constrained from their emission mechanism. Molecular emission in Protostellar Jets is generated when the constituent H2 atoms undergo an a certain rotational/vibrational transition between quantised energy levels. Molecular hydrogen posesses a permanent quadrupole moment enabeling rotational transition in O,Q or S branch. Most common transition is a 1−0S(1) line at 2.12μm which is a rotational/vibrational transition.
+ </p>
+
+
+
+<h3>3 Method </h3>
+<ul>
+<li>We start up with a slow wind in 2D cylindrical symmetry with dzeus code.</li>
+<li>A second wind is turned which is faster and less dense</li>
+<li>The interraction of winds is followed.</li>
+<li>IDL is used to calculate the atomic lines in the optical spectrum , molecular lines are calculated in the infrared and submillimetre.</li>
+<li>Final step is to move from 2D to 3D with Zeus-mp.</li>
+</ul>
+
+
+
+
+
+<h3>4 Results</h3>
+<p><img src="Jets.png"><br />
+<center><i>Figure 2: Jet Parameters March 6 Jet IDL</i></center></p>
+
+<b>4.1 Heavy & Light Jets<br /></b>
+
+<p>One of the key features in description of Jets is the η parameter which represents the ratio of densities of the jet ρjet, and ambient medium, ρamb
+ </p>
+
+<p><img src="eq1.png"><br/>
+
+<p>This ratio leads to classification of two parameters:</p>
+<ul>
+<li>Light jet &#951;<1</li>
+<li>Heavy jet &#951;>1</li>
+</ul>
+
+<p>Light jets are associated with extragalactic jets whereas heavy jets are usually associated with protostellar outflows. Another usefull quantity determines the shape of propagating jets.
+ </p>
+
+
+<p><img src="eq2.png"><br/>
+
+<p>Where V<sub>ws</sub> is the velocity of the working surface which is expressed in terms of jet beam velocity V<sub>1</sub> and the density ratio &#951;. The above equation describes the resulting shape of the jet and is consistent with the results. When the jet is classified as light, then V<sub>1</sub> < V<sub>ws</sub>. This configuration leads to an expanded cocoon with a working surface sweeping up material from the ambient medium. In case of a heavy jet with V<sub>1</sub>>V<sub>ws</sub>, the jet beam appears to be highly collimated and ploughs ahead , preventing the working surface from dominating and with little ambient material being entrained. Our recearch is concentrated on protostellar jets and winds interacting with the CS.
+ </p>
+
+<h3>4.2 Post-AGB Wind Models</h3>
+
+<p>Our cylindrical grid consists of equidistant 100 x 200 zones in r and z respectively.
+The innermost zone lies at the stellar surface and the outermost zone at z_0.
+The same input stellar conditions are used as the one used by Pascoli(1997) for an AGB star:ρs =3.5×10−10 gcm−3 and wind speed velocities incide the range 10-20 km/s. A second faster wind is set up with velocity of &#126;50 km/s. The next step is to compute solutions for interacting winds. Two different models are created (A and B) in which spherical and elliptical winds are set up.<br>
+The mass loss rate profile has the spatial distribution 
+equation.
+The 
+
+ </p>
+
+
+
+
+
+The results are published during the academic year of 2013/2014.
+
+<img src="bar.gif">
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>
